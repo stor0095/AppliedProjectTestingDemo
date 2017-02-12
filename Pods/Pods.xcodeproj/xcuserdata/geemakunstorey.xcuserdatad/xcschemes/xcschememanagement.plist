@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ApiAI.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-SnapchatCamera.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>PubNub.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>08563ED70A59E106EA9EAA351B12F68F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>34DC0376091F0B4855B4A1CF793C11FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA1A10F51779DEE8FF962A7B0C98A6A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DF2C4193BFEE1D321142F882BE5AB0DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F713D49B1AB14DE3C4DB363C84D3C306</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

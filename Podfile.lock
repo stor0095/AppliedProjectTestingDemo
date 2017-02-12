@@ -1,0 +1,41 @@
+PODS:
+  - ApiAI (0.7.0):
+    - ApiAI/AudioFileConverter (= 0.7.0)
+    - ApiAI/Core (= 0.7.0)
+    - ApiAI/Events (= 0.7.0)
+    - ApiAI/ResponseMapping (= 0.7.0)
+    - ApiAI/UIKit (= 0.7.0)
+    - ApiAI/UserEntities (= 0.7.0)
+    - ApiAI/VoiceFileRequest (= 0.7.0)
+    - ApiAI/VoiceRequest (= 0.7.0)
+  - ApiAI/AudioFileConverter (0.7.0):
+    - ApiAI/Core
+  - ApiAI/Core (0.7.0)
+  - ApiAI/Events (0.7.0):
+    - ApiAI/Core
+  - ApiAI/ResponseMapping (0.7.0):
+    - ApiAI/Core
+  - ApiAI/UIKit (0.7.0):
+    - ApiAI/Core
+    - ApiAI/VoiceRequest
+  - ApiAI/UserEntities (0.7.0):
+    - ApiAI/Core
+  - ApiAI/VoiceFileRequest (0.7.0):
+    - ApiAI/Core
+  - ApiAI/VoiceRequest (0.7.0):
+    - ApiAI/Core
+  - PubNub (4.5.13):
+    - PubNub/Core (= 4.5.13)
+  - PubNub/Core (4.5.13)
+
+DEPENDENCIES:
+  - ApiAI
+  - PubNub (~> 4)
+
+SPEC CHECKSUMS:
+  ApiAI: 25f763ddd88139dc5fe6794a905300244190d168
+  PubNub: 53711c37f9bcd8f927f154ca91774910a6b552ed
+
+PODFILE CHECKSUM: 9a8bbd8df47b1672803d24988237594efe041591
+
+COCOAPODS: 1.1.1
