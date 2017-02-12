@@ -282,7 +282,8 @@ extension View2: SpeechAPIStartRecording {
         let audioSession = AVAudioSession.sharedInstance()
         
         do {
-            try audioSession.setCategory(AVAudioSessionCategoryRecord)
+            // AVAudioSessionCategoryPlayAndRecord
+            try audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
             try audioSession.setMode(AVAudioSessionModeMeasurement)
             try audioSession.setActive(true, with: .notifyOthersOnDeactivation)
             
@@ -308,7 +309,7 @@ extension View2: SpeechAPIStartRecording {
             var isFinal = false
             
             if result != nil {
-                self.messageOutputLabel.text = result?.bestTranscription.formattedString
+        //        self.messageOutputLabel.text = result?.bestTranscription.formattedString
                 
                 let lowerCasedResultString = result!.bestTranscription.formattedString.lowercased()
                 //    print("Voice output: \(lowerCasedResultString)")
@@ -352,6 +353,8 @@ extension View2: SpeechAPIStartRecording {
                 
                 // Reset the button and label
                 self.buttonStoppedRecordingOriginalDesign()
+                
+                self.sendVoiceMessageToApiAI(message: self.voiceMessageString)
             }
         })
         
@@ -390,16 +393,16 @@ extension View2 {
                 let textToSpeechResponse = apiMessageResult!["speech"] as? String
                 
                 
-             //   self.messageOutputLabel.text = textToSpeechResponse
+         //       self.messageOutputLabel.text = textToSpeechResponse
                 
                //  print(jsonResult)
                 self.messageOutputLabel?.text = textToSpeechResponse!
-            //    self.playMessage(message: textToSpeechResponse!)
+                self.playMessage(message: textToSpeechResponse!)
 
                 //print("VOICEAPI: \(textToSpeechResponse!)")
                // self.speak([(textToSpeechResponse!, 3.0), ("Is there anyone there?", 10.0), ("Hello?", 0.0)])
                 
-                self.textTospeechVOICEResponse = textToSpeechResponse!
+             //   self.textTospeechVOICEResponse = textToSpeechResponse!
             }
             
             //hud.hide(animated: true)
@@ -450,13 +453,13 @@ extension View2 {
     }
     
     func playMessage(message: String) {
+        
         let utterance = AVSpeechUtterance(string: message)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
         // utterance.rate = 1
         // utterance.pitchMultiplier = 0.25
         // utterance.volume = 0.75
-        let synthesizer = AVSpeechSynthesizer()
-        synthesizer.speak(utterance)
+        speechSynthesizer.speak(utterance)
     }
 }
 
